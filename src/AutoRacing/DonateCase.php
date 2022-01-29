@@ -42,7 +42,7 @@ class DonateCase extends PluginBase implements Listener{
 	public function onCommand(CommandSender $sender, Command $command, $label, array $args) {
 		if(strtolower($command) == "givecase") {
 			if(!$sender->isOp()) {
-				return;
+				return true;
 			}
 			if(isset($args[0])) {
 				if(isset($args[1])){
